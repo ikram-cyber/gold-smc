@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Quantum SMC</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0e11] text-gray-200 font-sans">
+    <nav class="p-5 border-b border-gray-800 flex justify-between items-center bg-[#161a1e]">
+        <div>
+            <h1 class="text-xl font-black text-yellow-500 tracking-tighter">GOLD QUANTUM <span class="text-white">SMC</span></h1>
+            <p class="text-[9px] text-gray-500 uppercase tracking-widest">Institutional Algorithm v1.0</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span class="text-[10px] text-green-500 font-bold">LIVE</span>
+        </div>
+    </nav>
+
+    <div class="p-4">
+        <div class="bg-[#1e2329] p-5 rounded-2xl border border-gray-800 shadow-2xl">
+            <div class="flex justify-between items-end">
+                <div>
+                    <p class="text-xs text-gray-400">XAU/USD Spot</p>
+                    <h2 id="price" class="text-4xl font-mono font-bold text-white">0000.00</h2>
+                </div>
+                <div class="text-right">
+                    <p id="time" class="text-[10px] text-gray-500">--:--:--</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 grid grid-cols-2 gap-3">
+        <div id="fvgCard" class="card-conf">FVG DETECTED</div>
+        <div id="liqCard" class="card-conf">LIQUIDITY GRAB</div>
+        <div id="trendCard" class="card-conf">MTF TREND (H1)</div>
+        <div id="volCard" class="card-conf">VOLUME SPIKE</div>
+    </div>
+
+    <div class="p-4 mt-2">
+        <div id="signalPanel" class="bg-black border-2 border-dashed border-gray-800 p-6 rounded-3xl text-center">
+            <p class="text-[10px] text-gray-600 uppercase mb-2">Market Structure Analysis</p>
+            <h3 id="structureLabel" class="text-2xl font-bold text-gray-700 italic">SCANNING...</h3>
+            
+            <div id="entryBox" class="hidden mt-4 space-y-2">
+                <div id="signalType" class="py-2 bg-green-900/20 text-green-400 rounded-lg font-bold border border-green-800/50">
+                    SMC SIGNAL: BUY ENTRY
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                    <div class="p-2 bg-gray-900 rounded border border-gray-800">SL: <span id="slVal" class="text-red-400">--</span></div>
+                    <div class="p-2 bg-gray-900 rounded border border-gray-800">TP: <span id="tpVal" class="text-blue-400">--</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

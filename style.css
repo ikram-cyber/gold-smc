@@ -1,0 +1,21 @@
+.card-conf {
+    background-color: #1a1e24;
+    border: 1px solid #2d3748;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #718096;
+    transition: all 0.3s ease-in-out; 
+}
+.card-active-buy {
+    border-color: #4ade80;
+    color: #4ade80;
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.2);
+}
+.card-active-sell {
+    border-color: #f87171;
+    color: #f87171;
+    box-shadow: 0 0 15px rgba(248, 113, 113, 0.2);
+}
